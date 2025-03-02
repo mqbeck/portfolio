@@ -1,0 +1,514 @@
+:root
+{ 
+	--text_color_top: #5ce65e;
+	--bg_color_top: #27282b;
+	
+	--bg_body: white;
+	--text_body: black;
+	
+	--text_color_nav: #5ce65e;
+	--bg_color_nav: #27282b;
+	
+	--text_color_nav_highlight: black;
+	--bg_color_nav_highlight: #dddddd;
+	
+	--bg_color_nav_main: #04AA6D;
+	--text_color_nav_main: white;
+	
+	--bg_color_cardback: #27282b;
+	--text_color_cardback: #5ce65e;
+	
+	--image_border: #cccccc;
+	--image_border_hover: #777777;
+	
+	--bg_border: grey;
+	
+	--prev_next_hover: rgba(0,0,0,0.8);
+	--prev_next: purple;
+	--text_slidShow: #f2f2f2;
+	--slideShow_hover: #717171;
+	--autoPlay_active: red;
+	--bg_slideShow_text: rgba(0, 0, 0, 0.75);
+	
+	--tab_border: #cccccc;
+	--tab_border_focus_visible: blue;
+	--bg_tab: #f1f1f1;
+	--text_tab: black;
+	--bg_tab_hover: #dddddd;
+	--text_tab_hover: black;
+	--bg_tab_active: #cccccc;
+	--bg_tab_focus: pink;
+	--text_tab_focus: black;
+	
+	--a_link: #21cbed;
+	--a_visited: #3da8d1;
+	--a_hover: #10c4a6;
+	--a_active: #7a9e9f;
+	
+}
+
+a:link
+	{
+	  color: var(--a_link);
+	}
+
+	a:visited
+	{
+	  color: var(--a_visited);
+	}
+
+	a:hover
+	{
+	  color: var(--a_hover);
+	}
+
+	a:active
+	{
+	  color: var(--a_active);
+	  
+	}
+
+html
+{
+	//margin-left: 3%;
+	//margin-right: 3%;
+	border-right-style: solid;
+	border-right-width: 25px;
+	border-color: var(--bg_border);
+	
+	border-left-style: solid;
+	border-left-width: 25px;
+	border-color: var(--bg_border);
+}
+
+.mainTitleArea
+{
+  background-color: var(--bg_color_top);
+  span: 100%;
+  color: var(--text_color_top);
+  height: minmax(50px, 150 px);
+  text-align: center;
+}
+
+body
+{
+	font-size: 20px;
+	background-color: var(--bg_body);
+	color: var(--text_body);
+}
+
+.mainTitleArea > header > h1, p, img
+{
+  margin: 0px;
+}
+
+#giantHead
+{
+	width: 64px;
+	width: 64px;
+	margin-top: 10px;
+}
+
+.topNav
+{
+  background-color: var(--bg_color_nav);
+  overflow: hidden;
+  position: sticky;
+  width: 100%;
+  top: 00px;
+	z-index: 2;
+}
+
+.topNav a
+{
+  float: left;
+  display: block;
+  color: var(--text_color_nav);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topNav a:hover
+{
+  background-color: var(--bg_color_nav_highlight);
+  color: var(--text_color_nav_highlight);
+	cursor: pointer;
+}
+
+.topNav a.active
+{
+	background-color: var(--bg_color_nav_main);
+  color: var(--text_color_nav_main);
+}
+
+.topNav .icon
+{
+  display: none;
+}
+
+.gamesFlex
+{
+	display: flex;
+	flex-direction: row;
+}
+.bombadierCover,.phageCover
+{
+  width: 315px;
+  height: 275px;
+  overflow: hidden;
+	z-index: 1;
+}
+
+
+.flipCard
+{
+	background-color: transparent;
+	width: 315px;
+  height: 275px;
+	perspective: 500px;
+}
+
+.cardContent
+{
+	position: relative;
+  width: 100%;
+  height: 100%;
+	text-align: left;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flipCard:hover .cardContent
+{
+	transform: rotateY(180deg);
+}
+
+.cardFront, .cardBack
+{
+	position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.cardBack
+{
+	background-color: var(--bg_color_cardback);
+  color: var(--text_color_cardback);
+	transform: rotateY(180deg);
+	font-size: 16px;
+}
+
+.cardBack > h3
+{
+	margin: 0px;
+	margin-bottom: 5px;
+	text-decoration: underline;
+}
+
+.copyright
+{
+	//position: fixed;
+	//bottom: 10px;
+	//right: 10px;
+	text-align: center;
+}
+
+div.gallery
+{
+	border: 1px solid var(--image_border);
+}
+
+div.gallery:hover
+{
+	border: 1px solid var(--image_border_hover);
+}
+
+div.gallery img
+{
+	width: 100%;
+	height: auto;
+}
+
+div.description
+{
+	padding: 15px;
+	text-align: center;
+}
+
+*
+{
+	box-sizing: border-box;
+}
+
+.galleryResponse
+{
+	padding: 6px 6px;
+	float: left;
+	width: 33.32222%;
+}
+
+.slideshow-container
+{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+	width: auto;
+}
+
+div.fade > img
+{
+	max-height: 575px;
+	width: auto;
+	display: block;
+	object-position: 50%;
+	justify-self: center;
+}
+
+.dot-container
+{
+  position: relative;
+	width: auto;
+	justify-self: center;
+	display: flex;
+	padding-bottom: 15px;
+}
+
+.prev, .next
+{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: var(--prev_next);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.prev
+{
+	left: 30%;
+}
+
+.next
+{
+  right: 30%;
+}
+
+.prev:hover, .next:hover
+{
+  background-color: var(--prev_next_hover);
+}
+
+.text
+{
+  color: var(--text_slidShow);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext
+{
+  color: var(--text_slidShow);
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.text > span, .numbertext
+{
+	background-color: var(--bg_slideShow_text);
+   border-radius: 10%;
+	padding: 5px;
+}
+
+.dot1, .dot2
+{
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot1:hover, .dot2:hover, .play1:hover, .play2:hover
+{
+  background-color: var(--slideShow_hover);
+}
+
+.autoPlayOn
+{
+	color: var(--autoPlay_active);
+}
+
+.fade
+{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade
+{
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#hobbyTabs
+{
+	padding: 10px 5%;
+}
+
+.tab
+{
+  overflow: hidden;
+  border: 1px solid var(--tab_border);
+	border: none;
+  background-color: var(--bg_tab);
+}
+
+.tab button
+{
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+	border-radius: 50% 20% / 10% 40%;
+	color: var(--text_tab);
+}
+
+.tab button:hover
+{
+  background-color: var(--bg_tab_hover);
+	color: var(--text_tab_hover);
+	border-radius: 10px 100px / 120px;
+}
+
+.tab button:focus
+{
+  background-color: var(--bg_tab_focus);
+	color: var(--text_tab_focus);
+}
+
+.tab button:focus-visible
+{
+	border: 1px solid var(--tab_border_focus_visible);
+}
+
+.tab button.active
+{
+  background-color: var(--bg_tab_active);
+}
+
+.tabcontent
+{
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid var(--tab_border);
+  border-top: none;
+}
+
+#metal
+{
+	//background-image: url("images/hobbies/casting.png");
+	//background-image: cover;
+	//background-size: 100%;
+}
+
+
+@media screen and (max-width: 800px)
+{
+	.topNav a:not(:first-child)
+	{
+		display: none;
+	}
+	.topNav a.icon
+	{
+		float: right;
+		display: block;
+	}
+	
+  .topNav.responsive
+  {
+	  position: relative;
+		position: sticky;
+  }
+  .topNav.responsive a.icon
+  {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topNav.responsive a
+  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 780px)
+{
+  .gamesFlex
+  {
+		flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 780px)
+{	
+	.galleryResponse
+	{
+		width: 49.99999%;
+	}
+}
+
+@media screen and (max-width: 600px)
+{	
+	.galleryResponse
+	{
+		width: 75%;
+		margin: 6px 0;
+	}
+}
+
+@media screen and (max-width: 475px)
+{	
+	.dot1, .dot2
+	{
+		height: 10px;
+		width: 10px;
+	}
+}
+
+@media only screen and (max-width: 300px)
+{
+  .prev, .next,.text
+	{
+		font-size: 11px;
+	}
+}
+
+.clearfix:after
+{
+  content: "";
+  display: table;
+  clear: both;
+}
+
