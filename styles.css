@@ -474,10 +474,8 @@ div.fade > img
 		float: right;
 		display: block;
 	}
-	
   .topNav.responsive
   {
-	  position: relative;
 		position: sticky;
   }
   .topNav.responsive a.icon
@@ -485,6 +483,7 @@ div.fade > img
     position: absolute;
     right: 0;
     top: 0;
+		color: var(--text_color_nav_main);
   }
   .topNav.responsive a
   {
@@ -492,14 +491,20 @@ div.fade > img
     display: block;
     text-align: left;
   }
+	.topNav a:hover:last-child
+	{
+		background-color: var(--bg_color_nav_highlight);
+		color: var(--text_color_nav_highlight);
+		cursor: pointer;
+	}
 }
 @media screen and (max-width: 780px)
 {
-  .gamesFlex
-  {
+	.gamesFlex
+	{
 		flex-direction: column;
-  }
-}
+	}
+	}
 
 @media screen and (max-width: 780px)
 {	
