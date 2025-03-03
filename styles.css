@@ -532,6 +532,18 @@ div.fade > img
 	}
 }
 
+@media screen and (max-width: 455px)
+{	
+	.gamesFlex > a > figure
+	{
+		margin: 20px auto;
+	}
+	.gamesFlex
+	{
+		justify-self: center;
+	}
+}
+
 @media only screen and (max-width: 300px)
 {
   .prev, .next,.text
