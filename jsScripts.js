@@ -127,7 +127,7 @@ function setDark()
 	root.style.setProperty("--bg_color_nav_main", "#66d176");
 	root.style.setProperty("--text_color_nav_main", "black");
 	
-	root.style.setProperty("--bg_color_cardback", "#27282b");
+	root.style.setProperty("--bg_color_cardback", "#0E0707");
 	root.style.setProperty("--text_color_cardback", "#5ce65e");
 	
 	root.style.setProperty("--image_border", "#cccccc");

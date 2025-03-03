@@ -15,8 +15,8 @@
 	--bg_color_nav_main: #04AA6D;
 	--text_color_nav_main: white;
 	
-	--bg_color_cardback: #27282b;
-	--text_color_cardback: #5ce65e;
+	--bg_color_cardback: ##f1f1f1;
+	--text_color_cardback: black;
 	
 	--image_border: #cccccc;
 	--image_border_hover: #777777;
@@ -79,6 +79,7 @@ html
 	border-left-style: solid;
 	border-left-width: 25px;
 	border-color: var(--bg_border);
+	background-color: var(--bg_border);
 }
 
 .mainTitleArea
@@ -95,6 +96,15 @@ body
 	font-size: 20px;
 	background-color: var(--bg_body);
 	color: var(--text_body);
+	max-width: 1300px;
+	width: auto;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 25px;
+}
+
+.content
+{
 }
 
 .mainTitleArea > header > h1, p, img
@@ -148,19 +158,25 @@ body
   display: none;
 }
 
+.mainHeader
+{
+	text-decoration: underline;
+}
+
 .gamesFlex
 {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 }
-.bombadierCover,.phageCover
+
+.bombadierCover, .phageCover
 {
   width: 315px;
   height: 275px;
   overflow: hidden;
 	z-index: 1;
 }
-
 
 .flipCard
 {
@@ -200,6 +216,7 @@ body
   color: var(--text_color_cardback);
 	transform: rotateY(180deg);
 	font-size: 16px;
+	padding: 5px;
 }
 
 .cardBack > h3
@@ -207,6 +224,18 @@ body
 	margin: 0px;
 	margin-bottom: 5px;
 	text-decoration: underline;
+}
+
+figure
+{
+	margin: 20px;
+  width: 315px;
+	
+}
+
+figcaption
+{
+	text-align: center;
 }
 
 .copyright
