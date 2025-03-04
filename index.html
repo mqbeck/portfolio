@@ -257,7 +257,7 @@
 	</div>
 	<br>
 	<div class="dot-container" style="text-align:center">
-		<button aria-label="Auto play slideshow"><i class="play1 fa fa-toggle-right" tabindex=0 onkeydown="setAutoPlay(0)" onclick="setAutoPlay(1)"></i></button>
+		<i aria-label="Auto play slideshow" onkeydown="setAutoPlay(0)" onclick="setAutoPlay(0)" class="play1 fa fa-toggle-right" tabindex="0"></i>
 		<span class="dot1" tabindex=0 onkeydown="currentSlide(1, 0)" onclick="currentSlide(1, 0)"></span>
 		<span class="dot1" tabindex=0 onkeydown="currentSlide(2, 0)" onclick="currentSlide(2, 0)"></span>
 		<span class="dot1" tabindex=0 onkeydown="currentSlide(3, 0)" onclick="currentSlide(3, 0)"></span>
@@ -268,6 +268,8 @@
 		<span class="dot1" tabindex=0 onkeydown="currentSlide(8, 0)" onclick="currentSlide(8, 0)"></span>
 		<span class="dot1" tabindex=0 onkeydown="currentSlide(9, 0)" onclick="currentSlide(9, 0)"></span>
 		<span class="dot1" tabindex=0 onkeydown="currentSlide(10, 0)" onclick="currentSlide(10, 0)"></span>
+		<span class="dot1" tabindex=0 onkeydown="currentSlide(11, 0)" onclick="currentSlide(11, 0)"></span>
+		<span class="dot1" tabindex=0 onkeydown="currentSlide(12, 0)" onclick="currentSlide(12, 0)"></span>
 		
 		<a aria-label="Previous photo" class="prev" tabindex=0 onkeydown="changeSlide(-1, 0)" onclick="changeSlide(-1, 0)">❮</a>
 		<a aria-label="Next photo" class="next" tabindex=0 onkeydown="changeSlide(1, 0)" onclick="changeSlide(1, 0)">❯</a>
@@ -343,7 +345,7 @@
 	</div>
 	<br>
 	<div class="dot-container" style="text-align:center">	
-		<button aria-label="Auto play slideshow"><i class="play2 fa fa-toggle-right" tabindex=0 onkeydown="setAutoPlay(1)" onclick="setAutoPlay(1)"></i></button>
+		<i aria-label="Auto play slideshow" onkeydown="setAutoPlay(1)" onclick="setAutoPlay(1)" class="play2 fa fa-toggle-right" tabindex="0"></i>
 		<span class="dot2" tabindex=0 onkeydown="currentSlide(1, 1)" onclick="currentSlide(1, 1)"></span>
 		<span class="dot2" tabindex=0 onkeydown="currentSlide(2, 1)" onclick="currentSlide(2, 1)"></span>
 		<span class="dot2" tabindex=0 onkeydown="currentSlide(3, 1)" onclick="currentSlide(3, 1)"></span>
@@ -355,8 +357,8 @@
 		<span class="dot2" tabindex=0 onkeydown="currentSlide(9, 1)" onclick="currentSlide(9, 1)"></span>
 		<span class="dot2" tabindex=0 onkeydown="currentSlide(10, 1)" onclick="currentSlide(10, 1)"></span>
 		
-		<a aria-label="Previous photo" class="prev" tabindex=0 onkeydown="changeSlide(-1, 1)" onclick="changeSlide(-1, 0)">❮</a>
-		<a aria-label="Next photo" class="next" tabindex=0 onkeydown="changeSlide(1, 1)" onclick="changeSlide(1, 0)">❯</a>
+		<a aria-label="Previous photo" class="prev" tabindex=0 onkeydown="changeSlide(-1, 1)" onclick="changeSlide(-1, 1)">❮</a>
+		<a aria-label="Next photo" class="next" tabindex=0 onkeydown="changeSlide(1, 1)" onclick="changeSlide(1, 1)">❯</a>
 	</div>
 	<br>
 	<br>

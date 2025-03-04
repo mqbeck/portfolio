@@ -58,9 +58,9 @@ function showSlide(index, slideShow)
 function autoPlay()
 {
 	if (autoPlayOn[0])
-		changeSlide(slideIndex[0]++, 0)
+		changeSlide(1, 0)
 	if (autoPlayOn[1])
-		changeSlide(slideIndex[1]++, 1)
+		changeSlide(1, 1)
 	
 	setTimeout(autoPlay, 4000);
 }
@@ -138,8 +138,8 @@ function setDark()
 	root.style.setProperty("--prev_next_hover", "rgba(0,0,0,0.8)");
 	root.style.setProperty("--prev_next", "yellow");
 	root.style.setProperty("--text_slidShow", "#f2f2f2");
-	root.style.setProperty("--slideShow_hover", "#717171");
-	root.style.setProperty("--autoPlay_active", "red");
+	root.style.setProperty("--slideShow_hover", "#eb2315");
+	root.style.setProperty("--autoPlay_active", "#eb2315");
 	root.style.setProperty("--bg_slideShow_text", "rgba(0, 0, 0, 0.75)");
 	
 	root.style.setProperty("--tab_border", "black");

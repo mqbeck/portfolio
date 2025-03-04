@@ -26,9 +26,10 @@
 	--prev_next_hover: rgba(0,0,0,0.8);
 	--prev_next: purple;
 	--text_slidShow: #f2f2f2;
-	--slideShow_hover: #717171;
-	--autoPlay_active: red;
+	--slideShow_hover: rgb(235, 35, 21, 0.75);
+	--autoPlay_active: #eb4034;
 	--bg_slideShow_text: rgba(0, 0, 0, 0.75);
+	--text_slideshow_controls: #bbbbbb;
 	
 	--tab_border: #cccccc;
 	--tab_border_focus_visible: blue;
@@ -40,10 +41,10 @@
 	--bg_tab_focus: pink;
 	--text_tab_focus: black;
 	
-	--a_link: #21cbed;
-	--a_visited: #3da8d1;
-	--a_hover: #10c4a6;
-	--a_active: #7a9e9f;
+	--a_link: #0000ee;
+	--a_visited: #551a8b;
+	--a_hover: #ff0000;
+	--a_active: #ff0000;
 	
 }
 
@@ -306,6 +307,10 @@ div.fade > img
 	display: flex;
 	padding-bottom: 15px;
 }
+.fa-toggle-right
+{
+	color: var(--text_slideshow_controls);
+}
 
 .prev, .next
 {
@@ -370,13 +375,18 @@ div.fade > img
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: var(--text_slideshow_controls);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
-.active, .dot1:hover, .dot2:hover, .play1:hover, .play2:hover
+.active, .dot1:hover, .dot2:hover
+{
+  background-color: var(--slideShow_hover);
+}
+
+.play1:hover, .play2:hover
 {
   background-color: var(--slideShow_hover);
 }
